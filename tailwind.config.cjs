@@ -29,11 +29,17 @@ module.exports = {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'spin-slow': 'spin 4s linear infinite',
         'shine': 'shine 1.5s ease-out infinite',
+        'tilt': 'tilt 10s infinite linear',
       },
       keyframes: {
         shine: {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' }
+        },
+        tilt: {
+          '0%, 50%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(0.5deg)' },
+          '75%': { transform: 'rotate(-0.5deg)' },
         },
       },
     },

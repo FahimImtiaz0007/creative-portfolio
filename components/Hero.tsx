@@ -161,21 +161,40 @@ const Hero: React.FC = () => {
         </p>
 
         <div ref={buttonsRef} className="flex flex-col items-center justify-center gap-6 sm:flex-row opacity-0 transform translate-y-4 will-change-[transform,opacity]">
-          <a
-            href="#showcase"
-            onClick={(e) => handleScroll(e, '#showcase')}
-            className="group relative w-full overflow-hidden rounded-full bg-brand-600 px-12 py-5 text-center text-sm font-black uppercase tracking-[0.2em] text-white transition-all hover:bg-brand-700 hover:shadow-[0_0_50px_rgba(139,92,246,0.5)] sm:w-auto"
-          >
-            <span className="relative z-10">Explore Videos</span>
-            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full"></div>
-          </a>
-          <a
-            href="#contact"
-            onClick={(e) => handleScroll(e, '#contact')}
-            className="w-full rounded-full border border-gray-300 bg-white/10 px-12 py-5 text-center text-sm font-black uppercase tracking-[0.2em] text-gray-900 backdrop-blur-xl transition-all hover:bg-white/30 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 sm:w-auto"
-          >
-            Get In Touch
-          </a>
+          <div className="relative group">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-600 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+            <a
+              href="#showcase"
+              onClick={(e) => handleScroll(e, '#showcase')}
+              className="relative flex items-center justify-center w-full overflow-hidden rounded-2xl bg-brand-600 px-12 py-5 text-center text-sm font-black uppercase tracking-[0.2em] text-white transition-all duration-300 hover:scale-[1.02] active:scale-95 sm:w-auto"
+            >
+              <span className="relative z-10">Explore Videos</span>
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></div>
+            </a>
+          </div>
+
+          <div className="relative group">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-white via-gray-200 to-white rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+            <a
+              href="#images"
+              onClick={(e) => handleScroll(e, '#images')}
+              className="relative flex items-center justify-center w-full overflow-hidden rounded-2xl bg-white px-12 py-5 text-center text-sm font-black uppercase tracking-[0.2em] text-slate-900 transition-all duration-300 hover:scale-[1.02] active:scale-95 sm:w-auto"
+            >
+              <span className="relative z-10">Explore Images</span>
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-slate-900/10 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></div>
+            </a>
+          </div>
+
+          <div className="relative group">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-white/10 to-white/30 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+            <a
+              href="#contact"
+              onClick={(e) => handleScroll(e, '#contact')}
+              className="relative flex items-center justify-center w-full rounded-2xl border border-white/20 bg-slate-950/50 px-12 py-5 text-center text-sm font-black uppercase tracking-[0.2em] text-white backdrop-blur-md transition-all duration-300 hover:bg-white/10 hover:border-white/40 active:scale-95 sm:w-auto"
+            >
+              Get In Touch
+            </a>
+          </div>
         </div>
       </div>
     </section>

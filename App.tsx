@@ -240,7 +240,7 @@ const App: React.FC = () => {
               {/* Video Grid - Pinterest Style Dense Grid */}
               {/* Video Grid - Pinterest Style Dense Grid */}
               <div
-                className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 auto-rows-[150px] md:auto-rows-[180px]"
+                className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 auto-rows-auto sm:auto-rows-[150px] md:auto-rows-[180px]"
                 style={{ gridAutoFlow: 'dense' }}
               >
                 {VIDEOS.map((vid) => {
@@ -249,7 +249,7 @@ const App: React.FC = () => {
                   return (
                     <div
                       key={vid.id}
-                      className={`relative perspective-[1000px] ${isPortrait ? 'row-span-3' : 'row-span-1'}`}
+                      className={`relative perspective-[1000px] ${isPortrait ? 'sm:row-span-3' : 'sm:row-span-1'}`}
                     >
                       <GalleryCard item={vid} onClick={setSelectedItem} />
                     </div>
@@ -258,7 +258,7 @@ const App: React.FC = () => {
               </div>
 
               {/* Still Image Section */}
-              <div className="mb-16 mt-40 flex flex-col items-center justify-between gap-6 md:flex-row max-w-[1400px] mx-auto">
+              <div id="images" className="scroll-mt-24 mb-16 mt-40 flex flex-col items-center justify-between gap-6 md:flex-row max-w-[1400px] mx-auto">
                 <div className="relative pl-6">
                   <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-16 bg-purple-600 rounded-full shadow-[0_0_15px_rgba(147,51,234,0.8)]"></div>
                   <h2 className="text-4xl font-black tracking-tight sm:text-5xl uppercase">Neural Imagery</h2>
@@ -269,7 +269,7 @@ const App: React.FC = () => {
 
               {/* Image Grid - Uniform Cinematic Grid */}
               {/* Image Grid - Uniform Cinematic 5-Column Grid */}
-              <div ref={imageGridRef} className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+              <div ref={imageGridRef} className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                 {visibleImages.map((img) => (
                   <div key={img.id} className="image-card-item group perspective-[1000px] aspect-[9/16]">
                     <GalleryCard item={img} onClick={setSelectedItem} />
@@ -282,13 +282,13 @@ const App: React.FC = () => {
                 <div className="mt-16 flex justify-center">
                   <button
                     onClick={handleLoadMore}
-                    className="group relative overflow-hidden rounded-full bg-slate-900 px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition-all hover:bg-slate-800 hover:scale-105 active:scale-95"
+                    className="group relative overflow-hidden rounded-full bg-slate-900 px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition-all duration-300 hover:bg-slate-800 hover:scale-105 hover:shadow-[0_0_30px_rgba(139,92,246,0.4)] active:scale-95"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       See More Work
                       <i className="fas fa-arrow-down transition-transform group-hover:translate-y-1"></i>
                     </span>
-                    <div className="absolute inset-0 z-0 bg-gradient-to-r from-brand-500 via-purple-500 to-brand-500 opacity-0 transition-opacity duration-500 group-hover:opacity-20"></div>
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-brand-500/50 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></div>
                   </button>
                 </div>
               )}

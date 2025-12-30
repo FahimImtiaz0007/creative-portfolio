@@ -128,12 +128,12 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" ref={sectionRef} className="py-24 scroll-mt-20 perspective-[2000px]">
       <div className="container mx-auto px-6">
-        <div ref={containerRef} className="mx-auto max-w-6xl overflow-hidden rounded-[3.5rem] bg-slate-900/40 border border-white/5 backdrop-blur-2xl p-8 md:p-16 lg:p-20 shadow-[0_0_80px_rgba(0,0,0,0.4)] will-change-transform origin-center">
+        <div ref={containerRef} className="mx-auto max-w-6xl overflow-hidden rounded-[3.5rem] bg-white/60 dark:bg-slate-900/40 border border-gray-200 dark:border-white/5 backdrop-blur-2xl p-8 md:p-16 lg:p-20 shadow-[0_0_80px_rgba(0,0,0,0.1)] dark:shadow-[0_0_80px_rgba(0,0,0,0.4)] will-change-transform origin-center">
           <div ref={titleRef} className="text-center mb-16">
             <h2 className="mb-6 text-5xl font-black tracking-tight sm:text-7xl">
               Let's <span className="text-brand-500">Connect</span>.
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-gray-400 font-light leading-relaxed">
+            <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400 font-light leading-relaxed">
               Open for high-end collaborations, cinematic commissions, and AI-driven creative direction. Reach out through my direct channels below.
             </p>
           </div>
@@ -146,16 +146,16 @@ const Contact: React.FC = () => {
                 href={link.href}
                 target={link.isExternal ? '_blank' : undefined}
                 rel={link.isExternal ? 'noopener noreferrer' : undefined}
-                className={`group relative flex flex-col items-center justify-center rounded-[2.5rem] border ${link.borderColor} bg-white/5 p-10 transition-colors duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] ${link.color} overflow-hidden will-change-transform`}
+                className={`group relative flex flex-col items-center justify-center rounded-[2.5rem] border ${link.borderColor} bg-white/50 dark:bg-white/5 p-10 transition-colors duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] ${link.color} overflow-hidden will-change-transform`}
               >
                 {/* Background Glow */}
                 <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/5 blur-3xl transition-all group-hover:bg-white/20"></div>
 
-                <div className={`mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-slate-950/50 ${link.textColor} border border-white/5 transition-all duration-500 group-hover:scale-110 group-hover:bg-white group-hover:text-slate-900 shadow-xl`}>
+                <div className={`mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-white dark:bg-slate-950/50 ${link.textColor} border border-gray-100 dark:border-white/5 transition-all duration-500 group-hover:scale-110 group-hover:bg-white group-hover:text-slate-900 shadow-xl`}>
                   <i className={`${link.icon} text-3xl`}></i>
                 </div>
 
-                <h4 className="text-xs font-black uppercase tracking-[0.3em] text-gray-500 transition-colors group-hover:text-white">
+                <h4 className="text-xs font-black uppercase tracking-[0.3em] text-gray-600 dark:text-gray-500 transition-colors group-hover:text-white">
                   {link.name}
                 </h4>
 
